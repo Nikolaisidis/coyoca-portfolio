@@ -1,0 +1,96 @@
+/* Background Gradient */
+.landing-background {
+  width: 100%; /* Prevent horizontal overflow from scrollbars */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000; /* Blue */
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; /* Ensures circles respect boundaries */
+  overflow: hidden; /* Clipping overflow */
+}
+
+/* Keyframes for zoom-in and zoom-out */
+@keyframes zoom {
+  0%, 100% {
+    transform: scale(1); /* Normal size */
+  }
+  50% {
+    transform: scale(1.1); /* Scaled up */
+  }
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(30px);
+  animation: zoom 6s infinite ease-in-out; /* Animation applied */
+}
+
+.circle1 {
+  background: radial-gradient(circle, rgb(239, 255, 251), rgb(80, 216, 144)); /* Green to light cream */
+}
+
+.circle2 {
+  background: radial-gradient(circle, rgb(239, 255, 251), rgb(30, 230, 123)); /* Green to light cream */
+}
+
+/* Section to crop circles */
+.section {
+  position: relative;
+  overflow: hidden; /* Ensures any circles get cropped */
+  height: 100vh; /* Full-screen height for each section */
+}
+
+.dotted-square {
+  width: 250px; /* Width of the square */
+  height: 100px; /* Height of the square */
+  background: radial-gradient(circle, rgb(255, 255, 255) 10%, transparent 10%) repeat;
+  background-size: 45px 25px; /* Size of the dots */
+}
+
+/* Swing animation */
+@keyframes swing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(3deg);
+  }
+  50% {
+    transform: rotate(-3deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.swing {
+  animation: swing 2s infinite ease-in-out;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Slight zoom in */
+  }
+}
+
+.pulse {
+  animation: pulse 2.5s infinite ease-in-out; /* Smooth pulsing */
+}
+
+/* Add this to your CSS for the navbar */
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
