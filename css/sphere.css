@@ -5,8 +5,7 @@
 }
 
 .sphere {
-    width: 500px;
-    height: 500px;
+
     background: radial-gradient(circle at 30% 30%, rgb(79, 152, 202), rgb(80, 216, 144)); 
     border-radius: 50%;
     position: relative;

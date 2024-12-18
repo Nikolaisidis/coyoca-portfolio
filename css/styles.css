@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative; 
-  overflow: hidden; 
+
 }
 
 @keyframes zoom {
@@ -25,11 +25,11 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(30px);
-  animation: zoom 6s infinite ease-in-out; 
+ animation: zoom 6s infinite ease-in-out;
 }
 
 .circle1 {
-  background: radial-gradient(circle, rgb(239, 255, 251), rgb(80, 216, 144)); 
+  background: radial-gradient(circle, rgb(239, 255, 251), rgb(52, 228, 134)); 
 }
 
 .circle2 {
@@ -87,4 +87,3 @@
   width: 100%;
   z-index: 999;
 }
-

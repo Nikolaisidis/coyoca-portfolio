@@ -21,7 +21,7 @@
 
 #skills {
   opacity: 0;
-  transform: translateX(100px);
+  transform: translateX(-100px);
   transition: opacity 1s ease, transform 1s ease ;
 }
 #skills.visible {

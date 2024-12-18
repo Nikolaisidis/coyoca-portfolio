@@ -3,87 +3,29 @@ html {
   overflow-x: hidden;
 }
 
-#tilesContainer {
-  min-height: 90vh;
-  width: 100vw;
-  margin-top: 10vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  box-sizing: border-box;
-  align-content: center;
-}
-
-.tileItem {
-  width: 250px;
-  height: 250px;
-  margin: 5px;
-  border-radius: 5px;
-  transition: all 0.5s ease;
-}
-
-.tileItem:hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease;
-}
-
 #galleryContainer {
-  height: 500px;
-  width: 800px;
-  background: transparent;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  box-sizing: border-box;
   position: relative;
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-#toggle {
-  height: 10vh;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  margin: 10px;
-}
-
-#tilesView {
-  min-height: 100vh;
-  width: 100vw;
-  background: rgb(246, 210, 106);
-  background: linear-gradient(
-    111deg,
-    rgba(246, 210, 106, 1) 0%,
-    rgba(255, 159, 0, 1) 52%,
-    rgba(251, 197, 100, 1) 100%
-  );
-  display: none;
-  justify-content: center;
-  align-items: center;
-}
-
-#outer3 {
-  width: 100px;
-  height: 40px;
-  background-color: white;
-  margin: 10px auto;
-  border-radius: 3px;
-  border: 2px solid white;
-  transition: all 0.5s;
-}
 
 #mainView {
   height: 500px;
   width: 500px;
   border-radius: 5px;
-  background-color: #eb9100;
   margin-left: 10px;
   margin-right: 10px;
   transition: all 1s;
   border-radius: 10px;
   box-shadow: 0 0 40px rgba(246, 246, 246, 0.8);
   animation: glowAnimation 4s ease-in-out infinite;
+  background-attachment: fixed;
 }
 
 #mainView:hover {
@@ -98,13 +40,16 @@ html {
   border-radius: 5px;
   transform: skewy(5deg);
   transform-origin: top right;
-  background-color: #eb9100;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 1s;
   border-radius: 10px;
   box-shadow: 0 0 50px rgba(246, 246, 246, 0.8);
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   animation: glowAnimation 4s ease-in-out infinite;
 }
 
@@ -120,12 +65,12 @@ html {
   border-radius: 5px;
   transform: skewy(-5deg);
   transform-origin: top left;
-  background-color: #eb9100;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: all 1s;
   border-radius: 10px;
+  background-attachment: fixed;
   animation: glowAnimation 4s ease-in-out infinite;
 }
 
@@ -134,31 +79,6 @@ html {
   transition: all 1s;
 }
 
-.navBtns {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  border: none;
-  position: absolute;
-  opacity: 0.8;
-  background-color: transparent;
-  cursor: pointer;
-  color: white;
-}
-
-.navBtns:hover {
-  opacity: 1;
-  transition: all 1s;
-  background-color: #eb9100;
-}
-
-#navLeft {
-  left: 50px;
-}
-
-#navRight {
-  right: 50px;
-}
 
 #linkTag {
   cursor: pointer;
@@ -202,5 +122,19 @@ html {
   100% {
     box-shadow: 0 0 10px rgba(246, 246, 246, 0.8),
       0 0 20px rgba(246, 246, 246, 0.6), 0 0 30px rgba(246, 246, 246, 0.4);
+  }
+}
+
+@media (max-width: 768px) {
+  #leftView,
+  #rightView {
+    display: none;
+  }
+
+  #mainView {
+    width: 80%; 
+    height: 50%; 
+    margin: 0 auto;
+    box-shadow: 0 0 20px rgba(246, 246, 246, 0.8);
   }
 }
