@@ -81,7 +81,7 @@ export default function Contact() {
         I’d love to hear from you! Reach out if you have a question or just want
         to chat.
       </p>
-      <div className="font-poppins max-w-md mx-auto bg-white p-4 rounded-2xl border-4 border-transparent bg-clip-border shadow-[0_0_10px_5px_rgba(80,216,144,0.6)] relative z-10">
+      <div className="text-black font-poppins max-w-md mx-auto bg-white p-4 rounded-2xl border-4 border-transparent bg-clip-border shadow-[0_0_10px_5px_rgba(80,216,144,0.6)] relative z-10">
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="block text-sm font-bold mb-2" htmlFor="name">
