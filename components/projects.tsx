@@ -19,7 +19,6 @@ export default function Projects() {
       .getElementById("rightView")
       ?.addEventListener("click", scrollRight);
     document.getElementById("leftView")?.addEventListener("click", scrollLeft);
-    document.getElementById("mainView")?.addEventListener("click", scrollRight);
     document.addEventListener("keyup", function (e) {
       if (e.keyCode === 37) {
         scrollLeft();
@@ -46,7 +45,7 @@ export default function Projects() {
       document
         .getElementById("leftView")
         ?.removeEventListener("click", scrollLeft);
-        document
+      document
         .getElementById("mainView")
         ?.removeEventListener("click", scrollRight);
     };
@@ -74,7 +73,7 @@ export default function Projects() {
             <div className="flex flex-col sm:flex-row gap-4 p-3 font-K2D font-bold">
               <a
                 href={imgObject[mainImg].projectLink}
-                className="view-project bg-white px-4 py-2 rounded-xl text-center hover:bg-gray-200"
+                className="view-project text-black bg-white px-4 py-2 rounded-xl text-center hover:bg-gray-200"
               >
                 View Project
               </a>

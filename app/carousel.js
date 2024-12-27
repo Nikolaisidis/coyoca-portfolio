@@ -78,6 +78,12 @@ export let imgObject = [
   
     let details = document.getElementById("details");
     details.textContent = imgObject[mainImg].details;
+
+    let viewProjectLink = document.querySelector(".view-project");
+    viewProjectLink.href = imgObject[mainImg].projectLink;
+  
+    let viewCodeLink = document.querySelector(".view-code");
+    viewCodeLink.href = imgObject[mainImg].codeLink;
   }
 
   export function scrollRight() {
